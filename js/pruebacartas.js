@@ -13,7 +13,7 @@ class Carta {
     constructor() {
       this.cartas = [];
       const valores = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
-      const palos = ["Corazones", "Diamantes", "Tréboles", "Picas"];
+      const palos = ["Corazone", "Diamantes", "Tréboles", "Picas"];
   
       for (const palo of palos) {
         for (const valor of valores) {
@@ -33,7 +33,7 @@ class Carta {
       if (cantidad <= this.cartas.length) {
         return this.cartas.splice(0, cantidad);
       } else {
-        return null; // No hay suficientes cartas para repartir
+        return null;
       }
     }
   }
@@ -59,7 +59,7 @@ class Carta {
   const nombreJugador1 = prompt("Ingrese el nombre del Jugador 1:");
   const nombreJugador2 = prompt("Ingrese el nombre del Jugador 2:");
   
-  const cantidadCartas = parseInt(prompt("¿Cuántas cartas quieres que se repartan a cada jugador?"));
+  const cantidadCartas = parseInt(prompt("¿Cuántas cartas quieres que se repartan apra cada jugador?"));
   
   if (!isNaN(cantidadCartas)) {
     const manoJugador1 = baraja.repartir(cantidadCartas);
@@ -77,6 +77,6 @@ class Carta {
       alert("No hay suficientes cartas para repartir a ambos jugadores.");
     }
   } else {
-    alert("Por favor, ingresa un número válido.");
+    alert("Por favor, ingresar un número válido.");
   }
   
